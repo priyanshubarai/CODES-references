@@ -1,0 +1,16 @@
+#\\
+#\\code by priyanshu
+#\\
+
+#TITLE
+print('\nwhich number`s table to print')
+
+a=int(input('=  '))     #input
+b=0
+x=a*b       #algorithm
+print(a ,' x ', b ,' = ',x)     #output
+while b!=10:        #condition
+    b+=1
+    a=a
+    x=a*b
+    print(a ,' x ', b ,' = ',x)     #output
