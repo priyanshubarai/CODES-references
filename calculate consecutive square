@@ -1,0 +1,19 @@
+#\\
+#\\code by priyanshu
+#\\
+
+#input
+a=int(input('print squares of = '))
+b=int(input('upto = '))
+
+#algorithm
+b=b-1
+x=a**b
+
+#output
+print(a,' raise to power ',b,' = ',x)
+while b!=b:  #condition
+    b=b-(b)
+    a=a
+    x=a**b
+    print(a,' raise to power ',b,' = ',x)
