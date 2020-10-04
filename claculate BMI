@@ -1,0 +1,15 @@
+#\\
+#\\code by priyanshu
+#\\
+
+if __name__ == '__main__':
+
+    #input
+    weight = float(input('provide your weight in Kgs : '))
+    height = float(input('provide your height in meters : '))
+
+    #algorithm ans output
+    def BMI():
+        bmi = weight / height ** 2
+        print('\nYour BMI is ',bmi)
+    BMI()
