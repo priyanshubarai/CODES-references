@@ -1,0 +1,20 @@
+#\\
+#\\code by priyanshu
+#\\
+
+#input
+sum=0
+num=1
+
+while num != 0:     #condition
+    try:
+        num = int(input("\nprovide no. to add : "))
+        sum = sum + num   #algorithm
+        print("total sum = ",sum)       #output
+    except Exception as e:      #error exception
+        print("error=",type(e))
+        print("invalid input please try again")
+else:
+    print("\naddition finished "
+          "grand total : ",sum)     #grand output
+    exit()
