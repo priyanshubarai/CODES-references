@@ -1,0 +1,72 @@
+import os
+
+print("\n")
+a='l'
+
+#main
+print("WLCM to file handling protocol ")
+
+#home
+while str(a)!='Q':
+    opt=("\n[C]reate\n"
+         "[R]ead\n"
+        "[U]pdate\n"
+        "[D]elete\n"
+         "[Q]uit\n"
+         "[B]ack\n")
+    print(opt)
+
+    #create
+    a =str(input("choose a desired option : "))
+    if str(a)=='C':
+        f=str(input("give a name for the file : "))
+        c=open(f,"w+")
+        c.write(input("\nwrite below whatever to add in this file\n"))
+        print("changes are been saved")
+        c.close()
+
+    #read
+    elif str(a)=='R':
+        f=str(input("provide the name of that file : "))
+        if os.path.exists(f):
+            r=open(f,'r')
+            print(r.read())
+            r.close()
+        else:
+            print("file doesn`t exists")
+            continue
+
+    #Update
+    elif str(a)=='U':
+        f=str(input("enter the name of the file : "))
+        if os.path.exists(f):
+            u=open(f,'a')
+            u.write(input("\nwrite below whatever to add in this file\n"))
+            print("changes are been saved")
+            u.close()
+        else:
+            print("file doesn`t exists")
+            continue
+
+    #delete file
+    elif str(a)=='D':
+        f=str(input("enter the name of the file : "))
+        if os.path.exists(f):
+            os.remove(f)
+            print("this file has been deleted")
+            continue
+        else:
+            print("file doesn`t exists")
+            continue
+
+    #back
+    elif str(a)=='B':
+        print(opt)
+
+    #quit
+    elif str(a)=='Q':
+        print("\nfile handling protocol has been closed")
+        exit()
+    else:
+        print("\ninapprotiate input \nplz verify your input and try again\n")
+
